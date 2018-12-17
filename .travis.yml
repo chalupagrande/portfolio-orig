@@ -11,21 +11,20 @@ jobs:
         - echo $EMAIL
       script: yarn build
       before_deploy:
-        - echo $EMAIL
-        - git config user.email $EMAIL
+        - git config user.email "skinner520@gmail.com"
         - git config user.name "Jamie"
         - git add --force build
       deploy:
         provider: elasticbeanstalk
         access_key_id:
-          secure: "V9n1eMSagxC6T4VaRVYUxuRHqi7T1hPOAV0gNhOIBrg7fATqTYvu2zD04i0oqRWJwSSV3KbMR335kmVHL5vw+pl+TKEZriUNh3E9IDt0MrhD5r/t67ZRkKVNuP5d6ikWVv070qav58G9bKwcty+10iJzwkft9eeqKHgJGW9KqYwnEiywrnXeVftAXjbE531qqjWkR1/MAOOemM4vegnqSzl5W7MK7j3C5AATdTdaeAzr1r56ibQ2pJ2u5Rg/9i3ngyXJ7PdcV9jMjIqC2kNHKESZO57VsJgPO3CaKWLC0Hz6STlKZKvyhCayJBfNbr6Rnxc7ba2GOvKCe/KrtXsAYgtmqwtuHFd3MKHTkLfPU6FQtzMgDqEYIL9UMp8Xr8Mh3kPgd2s1dWTgU2iCBoSzPSYFtEySAN/RxzrfTBuIo+WTYEn4Yjz72C1WuKtJ8A3ELM8YClxxOwEHu4ykctQFp2rJSrFkkOST/1ySr7X4r1YTzp5m9yLIjiTpgdPgJ2VBxscOHA8oSvC/zsNGlC21h+zyzNdj4mo2ET7nd+20vS6J/M0fJ4AKrE6H6GoSUdZhvseZSrJF2M7N29AokmLNBBNo/aip6wyVVbqGs1+ABT/g4U2uJydK0/C+xKC8DbCZemq5P4LZ8GiiBexQUghp6ZeTnN8b40X+8pBaBMt/g54="
+          secure: "CrQXzsuBI2o0tbIJrWhqqLcX7fqcSpdvQit9wRV2/cenz9ZctUK7f8IuoNxfTTw0BwOYEYDP/5JEne1nLwBWCuJNK8fTlIRJBeUTlfUs8PF69UHw68e/KLChChAmlYEWcSLNd/Wm2sN5BIIfJPTw9wMCkMwwh9VVUDyMjWygjJRJ0xgpahZObZV4XK0w2xzll82CIRxQS7/WS2wtFxe3SPo9YzE/bQrqNNafw0LCpcMn4GFsZs6QLwFW7mJ5l7EZTyxValeFX2cBxzZTWhHeQW0luyLh8shEKJ1GTP5sAV6uBCx1ir0+FcAl8V7h+3ZbfQ1yQ3RaLtT7ky2ouTxoHjEOmqIhO7D2DEVtDnzPLBDeG2V+NEnBBF2+cdXsTV4+ivi+T0z/jC2R2jjV/WAthRulzBGB11Lu5X3rRwIAKjc1Bue+gyS6uqOLW0qLL0i/yA2ztrot6YGMC1ksvIqLxtApPma/F1ZLOZM1Gd77YO/ucuJkmIfeYQ2dI/PyIvOqWcFMUbDMyQYi/4Xa0PRlhhRhKlwU7HECNNsUYwAK87nN94EzRnJbM7Z7nAHXefHMVx59WPbDo+4cMefHu0kaQONj5y4qUNDDcB9O08/EOOMIDbBQVchYyhotiGHUX8rtUT+viNSo9UoD6dGtUsAPR7JPDUz1kD9OfcDXymI01SU="
         secret_access_key:
-          secure: "R6Wtg0Ax2X1NzlUV8P03+GsFF34K/vKTCRoTfbvmcGJ5ZAvAGN8zM/wgvMPtk5nxswLRxi54bNQjSNTqxInTkd8HIKcC6t+6TTZnGNU4bTPUtPeIetM/hyOdecG7KsHNlrqaAaqPLUwXcOf6xQ6e0geGNbUD8HiXXF5wnHC5ftI2CnoLAd3ieLVnbkkkniCZTYrBgNmLDAo6d9k3C2oSedTc876rAUJ/LT+vDtqWcnBHtumt6CK5hkbnjmWYHBLWVBW0JrqKmRb5njv7jrzZmcVXG++CcwTStoSH+UEqskWfJ9+mENjtEUbQIXi5lNrL7Y9Am+Xkb7EK3XZ90yzdGqJfW9NS9VTB8M8Yp/yV8HouANfx6sfIHTeS8FeJViJfRGBCL9vtVhDucyhrMBdd0tVw1jU6bdxfBr7zE+qn+VGinfhF7HeJYGivVzpVS6lOsDpB9Op9R+2p1+qN26r/jXGyFRwPx7vWkWmqiVZHmW+Cuueavq5FAD8BYMn31RagWgB/Ntcq6ojXhTiWFU41BS13DWMkPTXDV59ruGCcEj+ZAC+h7YBIAHAmLbNuSZMGCv/EpvWDkl8TsrXuX3Mib2A6T1C+cS7iSZOQKHwFPYCTWaUY+nToneycu9VBqdTkp3su1fNrenIxrWIWGcJEO1iAvWB+J9WhbyvWm1wd65A="
+          secure: "BD66/bbZv/P5hW83O+ajZPuUgDTzPGFrvbJdyrT1wEIXv0tunOxYNorTC4imTU7WkU5LDeNoWSq/dYcyA7tBKPUaIGQKfWN9pwG0VWFskkPV4B1aCvcrmD1WKJU7ztrzxmYIc2pzoZAw6MaI+5lLfwPKMpkhSPQFHDeWWytzgNAyjmO5stCzeW7glG3/J3NeX/V7+wkNMss8zCGNKsFOO+CGOQOfSs281768yJzVx6+UVI2di+F1q1v3L370Jkj6uDLfu/fu5vfFLRN05xgOJxmVxxcqkUSvSiRblEmYgURatcqL888kZCSdLwJtBTozgMH79iW4pZIFbAk+HTKSVKoPD70pX1dIe1b6lg6u0RNcC8yerQ/NSCfXuI57He/GHWmlPxMiCmbiAdmwWLMM0xQBMPZ880MB1CHQOfk/pRmm88cHOhVKzxmfczkuxZiYXKmXtVAqNi7NEseNs39REE9vmtOtM6nDDlsRq2FSxjoK5pgOQWM71pHV5u91ax+f7s8zyqs0xgFz6LUOL+n9vYffaKrzaQ2qMYeXGui7WinQuY9T1gzEPDfW6hxBu1XcDHv2PkTkzDGNpBh1qhtaDJ56Z5mC5EiX0AkTUk5LQmIGzI9LKRsqIcsOgYLCbnSBu3MSL5l7PDQR8vAUTVqB2TZjqQ5x6IrpdACCHUTcoAc="
         region: us-east-2
         app: portfolio
         env: Portfolio-env
         bucket_name: 'elasticbeanstalk-us-east-2-708373466372'
-        bucket_path: 'applications'
+        bucket_path: 'application-deployments'
         skip_cleanup: true
         on:
           repo: ninth-mind/portfolio
