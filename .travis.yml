@@ -19,7 +19,7 @@ jobs:
           secure: "VNSBtureOhEI1t/QcvPmPW4BO1NGWqpyUFWEKylM6TaQPLBIq6IjP4K6pKs/7RicGyWw/HdmwLHnmVHTh3ODvFn1WJt//5wvXYOt6wkE2FakHo8DVYehv1rh9FGxskeyghi+rsb4SvJWipfAGUkFK98tFPLv6vnVCLOP5gbsSZyk5TI64uKs5+slIi90d2p/6WZc3mv5moYgTp+pOb+yJrEK+39hNJIquGoSiORILA838b/XPPgwBTTkfADbnQ24d76s0eP00Fg3wVTtyhXqfw/HWefkz5rI0vOLWzyGF4yDsfx/H2esdLfr8p7YY+Js22Rwr7JMYUzbXtLWPu/8U9CDLfNx666est1xNbzzgvyi5jPYfPvy9EE3K0YZ7oSVBcAjxTdF3vm1t+Y8gJ8xiYbWsnNFfunbWqcxM6NJAhmw8mqafXQxTx2DmhBm0iglTHk7754yBPXq5u25po/ZVkPVys1nttIo90rGrAg50IpGg3KBEafHExhbfUCkq5lfSoCx7bJ9yN+tOMkMq3e7lljDYtku3wcjCzoAg0+y/q3ZJaV3RWw8I3pE9SmhgmDkPedfwfQBUU/EdOuqAHFp0WlqHZh1GNOB8ecPrT0Kdrw2H1wlYMvnzCalcaMy7TUqii+sRPPour5ugKat1ND3GnhnqcuaCcu1qHYPc53gY9Q="
         secret_access_key:
           secure: "MOIOWalagbXNRQXb8VtDiHd2eIyq9TgKezQBDZ01hd3NLCZ66YCPbrrJu7ZYublBM8Z+wI5akQyaFyM6SImPcqFpCbsS651XzKys0aywX0YGyLOUbHCk6K668eiRRsC/WBna6WiJ54Xf8jHoHBAh3zPh/vU1RrWvDhGFg7qe3AhoYSsim0SHw3c29Vun8HGOnHMfmILvriWXKaWRvsHfPzlk/Eqf2TdGmyzuXKZD+B3WlmR4lQUdD+xp2tOC04Gvp9BSPV23H63Hxsb8uOV5HgkyNFaVSKvn1kUQGxANdnmGcZn10JsnOyHq+04YHwzLbypceII6bcAS/C5PlmPlGV2r3FtbUCz+wv5EbJIv32HHwGW1UBCm7FYR3RRfn0tooiHGIbWWaEEz1o++1QUeFy3/4rOa6t+AiRpBZ9Ch7ZfLIpa8l4+Fj+kgnQ2PA2GXswHWoGk6fawyGeyDQEykwNW7xZBei3ZXGxTOrd9gDK8IE69t8as+U0puwDqwbHaz8Z0wp7flSEf33c2AyvlozZ0pEfUPe/rRB3p/G/f/1rt7eab8FMPtD63LKg+HNr08eH9YOCqCgq8olbtAe9ZNCz26yizGVKcskiuucg4Tuwa+8MYhztBdhrguSoeaLaLkFT08fpu5U3SR2PVFS6Jm7xhRJUTfTi+LQI9Ka5+fCwU="
-        region: us-east-2
+        region: "us-east-2"
         app: "portfolio"
         env: "Portfolio-env"
         bucket_name: 'elasticbeanstalk-us-east-2-708373466372'

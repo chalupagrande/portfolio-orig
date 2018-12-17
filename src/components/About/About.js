@@ -75,7 +75,7 @@ class About extends React.Component {
           <li>
             <a href="https://codepen.io/thesuperuser/">CodePen @thesuperuser</a> OR{' '}
             <a href="https://ninth-mind.github.io/sandbox/">Sandbox</a>
-            <br /> If you wanna see random snippets of code I think are cool
+            <br /> If you like random snippets of code
           </li>
           <li>
             <a href="https://codepen.io/thesuperuser/">Instagram @thesuperuser</a>
@@ -83,7 +83,7 @@ class About extends React.Component {
           </li>
           <li>
             <a href="https://www.linkedin.com/in/jamieacskinner/">Linked In @jamieacskinner</a>
-            <br /> If you wanna see some of my art
+            <br /> If you want to see some of my accomplishments
           </li>
           <li>
             <a href="/#" onClick={() => alert('COMING SOON!')}>
