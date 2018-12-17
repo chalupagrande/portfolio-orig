@@ -1,4 +1,5 @@
 .about {
+  position: static;
   font-family: 'Comic Sans MS', cursive, sans-serif; }
 
 blockquote {
@@ -8,39 +9,64 @@ blockquote {
 ul > li {
   margin: 0.5rem 0; }
 
-.small-img {
-  width: 400px; }
-
 .portrait {
   position: relative;
-  width: 100%;
-  height: 100px;
-  transform: translateX(-4%); }
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 50%;
+  overflow: hidden; }
   .portrait .cmyk-image {
     position: absolute;
     mix-blend-mode: multiply;
-    transition: left 0.3s, transform 0.3s; }
+    transform: translateX(-25%); }
     .portrait .cmyk-image.cmyk--0 {
-      left: 0%; }
+      animation: move0 5s ease-in-out 0s infinite alternate-reverse; }
     .portrait .cmyk-image.cmyk--1 {
-      left: 25%; }
+      animation: move1 5s ease-in-out 1s infinite alternate-reverse; }
     .portrait .cmyk-image.cmyk--2 {
-      left: 50%; }
+      animation: move2 5s ease-in-out 2s infinite alternate-reverse; }
     .portrait .cmyk-image.cmyk--3 {
-      left: 75%; }
+      animation: move3 5s ease-in-out 3s infinite alternate-reverse; }
+  .portrait:hover .cmyk-image {
+    left: 0px;
+    animation-play-state: paused; }
 
-.portrait:hover .cmyk-image.cmyk--0 {
-  left: 50%;
-  transform: translateX(-50%); }
+@keyframes move0 {
+  0% {
+    margin-left: 0; }
+  25% {
+    margin-left: 6px; }
+  50% {
+    margin-left: 4px; }
+  75% {
+    margin-left: 7px; } }
 
-.portrait:hover .cmyk-image.cmyk--1 {
-  left: 50%;
-  transform: translateX(-50%); }
+@keyframes move1 {
+  0% {
+    margin-left: 0; }
+  25% {
+    margin-left: -10px; }
+  50% {
+    margin-left: 5px; }
+  75% {
+    margin-left: -5px; } }
 
-.portrait:hover .cmyk-image.cmyk--2 {
-  left: 50%;
-  transform: translateX(-50%); }
+@keyframes move2 {
+  0% {
+    margin-left: 0; }
+  25% {
+    margin-left: 3px; }
+  50% {
+    margin-left: 5px; }
+  75% {
+    margin-left: 1px; } }
 
-.portrait:hover .cmyk-image.cmyk--3 {
-  left: 50%;
-  transform: translateX(-50%); }
+@keyframes move3 {
+  0% {
+    margin-left: 0; }
+  25% {
+    margin-left: -8px; }
+  50% {
+    margin-left: 4px; }
+  75% {
+    margin-left: -6px; } }

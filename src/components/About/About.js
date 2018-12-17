@@ -14,10 +14,10 @@ class About extends React.Component {
         <h1>Hi</h1>
         <h2>My name is Jamie Skinner</h2>
         <div className="portrait">
-          <img className="small-img cmyk-image cmyk--0" src={C} alt="Cyan" />
-          <img className="small-img cmyk-image cmyk--1" src={Y} alt="Yellow" />
-          <img className="small-img cmyk-image cmyk--2" src={K} alt="blacK" />
-          <img className="small-img cmyk-image cmyk--3" src={M} alt="Magenta" />
+          <img className="cmyk-image cmyk--0" src={C} alt="Cyan" />
+          <img className="cmyk-image cmyk--1" src={Y} alt="Yellow" />
+          <img className="cmyk-image cmyk--2" src={K} alt="blacK" />
+          <img className="cmyk-image cmyk--3" src={M} alt="Magenta" />
         </div>
         <h3>
           I am a Fullstack Developer, Software Designer, and Artist currently working for IBM

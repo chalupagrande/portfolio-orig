@@ -1,4 +1,5 @@
 .about {
+  position: static;
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
@@ -11,36 +12,101 @@ ul > li {
   margin: 0.5rem 0;
 }
 
-.small-img {
-  width: 400px;
-}
-
 .portrait {
   position: relative;
-  width: 100%;
-  height: 100px;
-  transform: translateX(-4%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 50%;
+  overflow: hidden;
 
   & .cmyk-image {
     position: absolute;
     mix-blend-mode: multiply;
-    transition: left 0.3s, transform 0.3s;
+    transform: translateX(-25%);
 
     @for $index from 0 through 3 {
       &.cmyk--#{$index} {
-        left: $index * 25%;
+        animation: (move + $index) 5s ease-in-out $index*1s infinite alternate-reverse;
       }
     }
   }
+
+  &:hover .cmyk-image {
+    left: 0px;
+    animation-play-state: paused;
+  }
 }
 
-.portrait:hover {
-  & .cmyk-image {
-    @for $index from 0 through 3 {
-      &.cmyk--#{$index} {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
+
+
+@keyframes move0 {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: random(20) + px;
+  }
+
+  50% {
+    margin-left: random(5) + px;
+  }
+
+  75% {
+    margin-left: random(10) + px;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: random(20) * -1px;
+  }
+
+  50% {
+    margin-left: random(5) + px;
+  }
+
+  75% {
+    margin-left: random(10) * -1px;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: random(20) + px;
+  }
+
+  50% {
+    margin-left: random(5) + px;
+  }
+
+  75% {
+    margin-left: random(10) + px;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: random(20) * -1px;
+  }
+
+  50% {
+    margin-left: random(5) + px;
+  }
+
+  75% {
+    margin-left: random(10) * -1px;
   }
 }
