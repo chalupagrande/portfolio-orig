@@ -1,7 +1,7 @@
 language: node_js
 env:
   global:
-    secure: lvr32eZXNavEIohr21kahk2O0qyAqNU5qFyQ/33OhanEgj4ZUmyYTpzYkE24szUYMLWD3V6QZoIkFLeaQ5ERxQ9JMKmhsCXPqGSh/rCL6oFMaibbUsHxH8H0pbIzkoVzFNmRwPI0astPGmVq+y/ouSOvS7pLUydk6IEc7C6w2YrOhD7uRAO1oyNyBGEft+s3g5OOEoRUYwJ1lVRCEVYcgdPKZizNuKODZysBHkXhyrF5fKxP6g8hiLWkPJM1j98JrBMEyuN7/oOFloMfcsj/uGVYQ9iL9L11O8q2TC4NwR4VGn2w8zurBzcLDVs8LL4WlJkUopHtaUct47t8jsiok4tFhiY50YSVQbG0wVX23+Nj0kjvxhwSp60s/oQU7wZxulaPD86apOwK9andir/C+SXPod6B28bnSPEJ7rmyCo4n5jF+XBCQ76q454YnJqagEmomhV+D0EoY4Sh36aF4ZxonQ0m9XQhhSbCwzeqtRbOZk0ROeMRs3SAupHgDMP2Kypnugkmwzf8Z9IENrAQUGvQhdlk3Nwn8esu8TejWv6xCvkzwHM/NulYlIxAOppWNTlf70O7dMojFcMxssEL4d7owHMh+k4roCGgj/sGEr3dhEZ0NH6bXGwwKFi9U8TNYPpMz4Qa58V/vidvukRhqW39Q1rq1jnQWgK2P4fSpQoo=
+    secure: "lvr32eZXNavEIohr21kahk2O0qyAqNU5qFyQ/33OhanEgj4ZUmyYTpzYkE24szUYMLWD3V6QZoIkFLeaQ5ERxQ9JMKmhsCXPqGSh/rCL6oFMaibbUsHxH8H0pbIzkoVzFNmRwPI0astPGmVq+y/ouSOvS7pLUydk6IEc7C6w2YrOhD7uRAO1oyNyBGEft+s3g5OOEoRUYwJ1lVRCEVYcgdPKZizNuKODZysBHkXhyrF5fKxP6g8hiLWkPJM1j98JrBMEyuN7/oOFloMfcsj/uGVYQ9iL9L11O8q2TC4NwR4VGn2w8zurBzcLDVs8LL4WlJkUopHtaUct47t8jsiok4tFhiY50YSVQbG0wVX23+Nj0kjvxhwSp60s/oQU7wZxulaPD86apOwK9andir/C+SXPod6B28bnSPEJ7rmyCo4n5jF+XBCQ76q454YnJqagEmomhV+D0EoY4Sh36aF4ZxonQ0m9XQhhSbCwzeqtRbOZk0ROeMRs3SAupHgDMP2Kypnugkmwzf8Z9IENrAQUGvQhdlk3Nwn8esu8TejWv6xCvkzwHM/NulYlIxAOppWNTlf70O7dMojFcMxssEL4d7owHMh+k4roCGgj/sGEr3dhEZ0NH6bXGwwKFi9U8TNYPpMz4Qa58V/vidvukRhqW39Q1rq1jnQWgK2P4fSpQoo="
 jobs:
   include:
     - stage: build & deploy
@@ -9,6 +9,7 @@ jobs:
         - bash scripts/travisPrepForDeployment.sh
       script: yarn build
       before_deploy:
+        - echo $EMAIL
         - git config user.email "skinner520@gmail.com"
         - git config user.name "Jamie"
         - git add --force build
@@ -19,8 +20,8 @@ jobs:
         secret_access_key:
           secure: "BD66/bbZv/P5hW83O+ajZPuUgDTzPGFrvbJdyrT1wEIXv0tunOxYNorTC4imTU7WkU5LDeNoWSq/dYcyA7tBKPUaIGQKfWN9pwG0VWFskkPV4B1aCvcrmD1WKJU7ztrzxmYIc2pzoZAw6MaI+5lLfwPKMpkhSPQFHDeWWytzgNAyjmO5stCzeW7glG3/J3NeX/V7+wkNMss8zCGNKsFOO+CGOQOfSs281768yJzVx6+UVI2di+F1q1v3L370Jkj6uDLfu/fu5vfFLRN05xgOJxmVxxcqkUSvSiRblEmYgURatcqL888kZCSdLwJtBTozgMH79iW4pZIFbAk+HTKSVKoPD70pX1dIe1b6lg6u0RNcC8yerQ/NSCfXuI57He/GHWmlPxMiCmbiAdmwWLMM0xQBMPZ880MB1CHQOfk/pRmm88cHOhVKzxmfczkuxZiYXKmXtVAqNi7NEseNs39REE9vmtOtM6nDDlsRq2FSxjoK5pgOQWM71pHV5u91ax+f7s8zyqs0xgFz6LUOL+n9vYffaKrzaQ2qMYeXGui7WinQuY9T1gzEPDfW6hxBu1XcDHv2PkTkzDGNpBh1qhtaDJ56Z5mC5EiX0AkTUk5LQmIGzI9LKRsqIcsOgYLCbnSBu3MSL5l7PDQR8vAUTVqB2TZjqQ5x6IrpdACCHUTcoAc="
         region: us-east-2
-        app: portfolio
-        env: Portfolio-env
+        app: "portfolio"
+        env: "Portfolio-env"
         bucket_name: 'elasticbeanstalk-us-east-2-708373466372'
         bucket_path: 'application-deployments'
         skip_cleanup: true
