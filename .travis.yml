@@ -7,8 +7,6 @@ jobs:
     - stage: build & deploy
       before_script:
         - bash scripts/travisPrepForDeployment.sh
-        - bash scripts/testVars.sh
-        - echo $EMAIL
       script: yarn build
       before_deploy:
         - git config user.email "skinner520@gmail.com"
