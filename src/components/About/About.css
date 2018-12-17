@@ -1,0 +1,46 @@
+.about {
+  font-family: 'Comic Sans MS', cursive, sans-serif; }
+
+blockquote {
+  padding: 1rem;
+  border-left: 5px solid darkgrey; }
+
+ul > li {
+  margin: 0.5rem 0; }
+
+.small-img {
+  width: 400px; }
+
+.portrait {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  transform: translateX(-4%); }
+  .portrait .cmyk-image {
+    position: absolute;
+    mix-blend-mode: multiply;
+    transition: left 0.3s, transform 0.3s; }
+    .portrait .cmyk-image.cmyk--0 {
+      left: 0%; }
+    .portrait .cmyk-image.cmyk--1 {
+      left: 25%; }
+    .portrait .cmyk-image.cmyk--2 {
+      left: 50%; }
+    .portrait .cmyk-image.cmyk--3 {
+      left: 75%; }
+
+.portrait:hover .cmyk-image.cmyk--0 {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.portrait:hover .cmyk-image.cmyk--1 {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.portrait:hover .cmyk-image.cmyk--2 {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.portrait:hover .cmyk-image.cmyk--3 {
+  left: 50%;
+  transform: translateX(-50%); }
