@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./connections/db');
 const ApiRouter = require('./routers/ApiRouter');
+const http = require('http')
 const express_enforces_ssl = require('express-enforces-ssl');
 const app = express();
 
