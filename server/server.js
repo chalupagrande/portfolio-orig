@@ -28,7 +28,6 @@ app.get('/house', (req, res) => {
   res.sendFile(path.join(__dirname + '/pages/sudo.html'));
 })
 
-
 app.use('/api', ApiRouter);
 
 app.listen(port);
