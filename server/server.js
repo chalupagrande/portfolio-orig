@@ -35,7 +35,7 @@ http.createServer(app).listen(port, function() {
   console.log(`
   **************** LOGS ***************
   Server Started: ${new Date()}
-  listening on port: ${app.get('port')}
+  listening on port: ${port}
   ~~~~~`
   )
 });
