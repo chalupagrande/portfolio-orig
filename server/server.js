@@ -30,9 +30,11 @@ app.get('/house', (req, res) => {
 
 app.use('/api', ApiRouter);
 
-app.listen(port);
-console.log(`**************** LOGS ***************
+http.createServer(app).listen(port, function() {
+  console.log(`
+  **************** LOGS ***************
   Server Started: ${new Date()}
-  listening on port: ${port}
-  ~~~~~
-`);
+  listening on port: ${app.get('port')}
+  ~~~~~`
+  )
+});
