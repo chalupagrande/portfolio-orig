@@ -8,27 +8,57 @@
   <title>AR Test</title>
 
   <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>\
+  <style>
+    .status {
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+    }
+  </style>
 </head>
-
 <body>
+  <p class="status">MARKER NOT FOUND</p>
   <a-scene embedded arjs>
     <!-- <a-marker preset="hiro"> -->
-    <a-marker-camera preset='custom' type='pattern' url='sudo-lightblue.patt'>
-      <a-sphere position="0 0.5 0" radius="0.1" color="red"></a-sphere>
-      <a-sphere position="1 0.5 0" radius="0.1" color="green"></a-sphere>
-      <a-sphere position="-1 0.5 0" radius="0.1" color="green"></a-sphere>
-      <a-sphere position="2 0.5 0" radius="0.1" color="blue"></a-sphere>
-      <a-sphere position="-2 0.5 0" radius="0.1" color="blue"></a-sphere>
-      <a-sphere position="5 0.5 0" radius="0.1" color="red"></a-sphere>
-      <a-sphere position="-5 0.5 0" radius="0.1" color="red"></a-sphere>
-      <a-sphere position="8 0.5 0" radius="0.1" color="green"></a-sphere>
-      <a-sphere position="-8 0.5 0" radius="0.1" color="green"></a-sphere>
-      <a-sphere position="10 0.5 0" radius="0.1" color="blue"></a-sphere>
-      <a-sphere position="-10 0.5 0" radius="0.1" color="blue"></a-sphere>
-    </a-marker-camera>
+      <!-- <a-marker preset='custom' type='pattern' url='sudo-lightblue.patt' emitsevents='true'>
+      </a-marker> -->
+    <a-marker type="pattern" url='sudo-lightblue.patt' patternUrl='sudo-lightblue.patt'>
+      <a-sphere position="0 0 0" radius="0.1" color="red"></a-sphere>
+      <a-sphere position="1 0 0" radius="0.1" color="green"></a-sphere>
+      <a-sphere position="-1 0 0" radius="0.1" color="green"></a-sphere>
+      <a-sphere position="2 0 0" radius="0.1" color="blue"></a-sphere>
+      <a-sphere position="-2 0 0" radius="0.1" color="blue"></a-sphere>
+      <a-sphere position="5 0 0" radius="0.1" color="red"></a-sphere>
+      <a-sphere position="-5 0 0" radius="0.1" color="red"></a-sphere>
+      <a-sphere position="8 0 0" radius="0.1" color="green"></a-sphere>
+      <a-sphere position="-8 0 0" radius="0.1" color="green"></a-sphere>
+      <a-sphere position="10 0 0" radius="0.1" color="blue"></a-sphere>
+      <a-sphere position="-10 0 0" radius="0.1" color="blue"></a-sphere>
+    </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
+
+  <script>
+    const textIsVisible = true
+    function animate() {
+      setTimeout(()=>{
+        window.requestAnimationFrame(animate)
+        var isFound = document.querySelector('a-marker').object3D.visible
+        if(isFound && textIsVisible){
+          document.querySelector('.status').style.display = 'none'
+          textIsVisible = false
+        } else {
+          document.querySelector('.status').style.display = 'block'
+          textIsVisible = true
+        }
+      }, 1000/10)
+    }
+    window.requestAnimationFrame(animate)
+  </script>
 </body>
 
 </html>
