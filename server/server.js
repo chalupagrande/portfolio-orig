@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./connections/db');
 const ApiRouter = require('./routers/ApiRouter');
-// const express_enforces_ssl = require('express-enforces-ssl');
+const express_enforces_ssl = require('express-enforces-ssl');
 const app = express();
 
 app.use(cors());
@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 4000;
 
-// app.enable('trust proxy');
-// app.use(express_enforces_ssl());
+app.enable('trust proxy');
+app.use(express_enforces_ssl());
 
 
 const frontEndRoutes = ['/', '/about'];
